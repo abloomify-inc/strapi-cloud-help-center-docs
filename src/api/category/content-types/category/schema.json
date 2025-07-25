@@ -18,14 +18,26 @@
     "slug": {
       "type": "uid"
     },
-    "articles": {
+    "helpDocumentation": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::article.article",
+      "target": "api::help-documentation.help-documentation",
       "mappedBy": "category"
     },
     "description": {
       "type": "text"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "children"
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category",
+      "mappedBy": "parent"
     }
   }
 }

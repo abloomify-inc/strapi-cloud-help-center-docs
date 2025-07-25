@@ -3,7 +3,7 @@
   "collectionName": "help-documentation",
   "info": {
     "singularName": "help-documentation",
-    "pluralName": "help-documentation",
+    "pluralName": "help-documentations",
     "displayName": "Help Documentation",
     "description": "Create documentation content for Abloomify's help center"
   },
@@ -22,6 +22,16 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "helpDocumentation"
+    },
+    "isFolderIndex": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
