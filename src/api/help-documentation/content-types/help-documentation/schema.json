@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "help-documentation",
+  "info": {
+    "singularName": "help-documentation",
+    "pluralName": "help-documentation",
+    "displayName": "Help Documentation",
+    "description": "Create documentation content for Abloomify's help center"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
